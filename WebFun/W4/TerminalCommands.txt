@@ -1,0 +1,36 @@
+Navigate to desktop
+pwd
+cd desktop
+
+Create new dir call it test
+mkdire test
+
+make files called index.html, styles.css commands.txt
+
+cd test
+touch indext.html
+touch styles.css
+touch commands.txt
+
+make a copy of index and call it index_2.html
+cp index.html index_2.html
+
+navigate back to your desktop
+cd ..
+move index_2.html to the destination directory
+mkdir destination
+mv index_2.html ../destination
+
+in test dir remove style.css file
+rm style.css
+
+now check and see what files are in test and destination dirs
+pwd
+ls
+cd ..
+cd destination
+ls
+
+remove delete detination dir
+cd ..
+rm -rf destination

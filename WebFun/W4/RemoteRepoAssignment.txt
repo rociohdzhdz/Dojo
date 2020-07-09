@@ -1,0 +1,21 @@
+Create a new repo on Github and call it basic_repo
+
+git remote add basic_repo https://github.com/rociohdzhdz/basic_repo.git
+
+Create a local repository basic_repo
+mkdire basic_repo
+
+Create some files inside you local repor and add some content to them
+touch uno.html
+touch uno.css
+
+Add commit and push these changes to github
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/rociohdzhdz/basic_repo.git
+git push -u origin master
+
+make some changes to your local and push them to github
+git add .
+git commit  -m "Changes added to both files"
+git push -u origin master

@@ -1,0 +1,28 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#wrapper{
+    width: 500px;
+    height: 650px;
+    background-color: salmon;
+
+}
+
+#wrapper h2{
+    text-align: center;
+}
+
+#slice0{
+    width: 181px;
+    height: 48px;
+    background-color: seagreen;
+    margin-left: 20px;
+ 
+}
+.slices{
+    width: 181px;
+    height: 50px;
+    background-color: seagreen;
+    margin-top: 2px;
+}

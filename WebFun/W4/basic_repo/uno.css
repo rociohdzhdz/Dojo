@@ -1,0 +1,10 @@
+#wrapper{
+    width: 700px;
+    height: 400px;
+    background-color: royalblue;
+}
+#square{
+    width: 250px;
+    height: 250px;
+    background-color: salmon;
+}

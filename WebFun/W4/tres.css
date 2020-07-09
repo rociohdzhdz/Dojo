@@ -1,0 +1,82 @@
+*{
+    font-size: large;
+}
+
+#Fondo{
+    width: 900px;
+    height: 700px;
+    background-color: aqua;
+}
+
+#square1{
+    width: 90px;
+    height: 90px;
+    background-color: violet;
+    display: inline-block;
+}
+
+#square2{
+    width: 90px;
+    height: 90px;
+    background-color: violet;
+    display: inline-block;
+}
+
+.square{
+    width: 90px;
+    height: 90px;
+    background-color: violet;
+    display: inline-block;
+}
+
+#square4{
+    width: 150px;
+    height: 150px;
+    background-color: lavender;
+    display: inline-block;
+}
+
+#square5{
+    width: 150px;
+    height: 150px;
+    background-color: lavender;
+    display: inline-block;
+}
+#square6{
+    width: 150px;
+    height: 150px;
+    background-color: lavender;
+    display: inline-block;
+}
+
+#square7{
+    width: 350px;
+    height: 150px;
+    background-color: red;
+    display: inline-block;
+}
+
+#square8{
+    width: 350px;
+    height: 350px;
+    background-color:gold;
+    display: inline-block;
+}
+#square9{
+    width: 350px;
+    height: 350px;
+    background-color:gold;
+    display: inline-block;
+}
+#square10{
+    width: 350px;
+    height: 350px;
+    background-color:gold;
+    display: inline-block;
+}
+#square11{
+    width: 350px;
+    height: 350px;
+    background-color:gold;
+    display: inline-block;
+}
