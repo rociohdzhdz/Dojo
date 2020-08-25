@@ -1,0 +1,23 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+}
+#wrapper{
+    width: 700px;
+    height: 800px;
+    align-items: center;
+
+}
+
+table, th, td{
+    border:1px solid blueviolet;
+}
+
+#formulario{
+    width: 800px;
+    height: 500px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

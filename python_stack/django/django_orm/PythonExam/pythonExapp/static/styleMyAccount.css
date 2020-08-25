@@ -1,0 +1,33 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(63, 61, 61);
+}
+#wrapper{
+    width: 1080px;
+    height: auto;
+    background-color:whitesmoke;
+    margin-left: 50px;
+    
+}
+#head{
+    width: 1000px;
+    height: 100px;
+    margin-left: 20px;
+    background-color:rgb(238, 201, 213);
+    display: inline-block;
+}
+#headUsr{
+    margin-left: 900px;
+    margin-top: 10px;
+}
+h2{
+    margin-left: 20px;
+}
+
+#formprofile{
+   margin: 25px;
+
+}
+#profemail{
+    margin-left: 39px;
+}

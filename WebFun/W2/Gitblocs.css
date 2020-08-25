@@ -1,0 +1,44 @@
+*{
+    outline: 1px dotted red;
+}
+#wrapper{
+       width: 1000px;
+    height: 800px;
+    /*display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;*/
+}
+#h1{
+    vertical-align: center;
+}
+
+.caja{
+    background-color: burlywood;
+    width: 710px;
+    height: 500px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.subcaja1{
+    background-color: royalblue;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.git_img{
+    background-color: blue;
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+}
+.git_img2{
+    background-color: darksalmon;
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+}

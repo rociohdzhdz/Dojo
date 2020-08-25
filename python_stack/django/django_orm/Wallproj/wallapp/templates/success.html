@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styleMess.css' %}">
+</head>
+
+<body>
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+    <div id="wrapper">
+        <h1> Welcome to {{request.session.usrname }}, message wall!</h1>
+        <a href="/logoutus">Logout</a>
+        <h2>Post a Message</h2>
+        <form id="messagform" action="/createmessage" method="POST">
+            {% csrf_token %}
+            <textarea name="content" id="" cols="90" rows="5"></textarea>
+            <input type="submit" value="Post the message">
+        </form>
+       
+            {% for onemessage in all_messages %}
+            <div class="rectangle">
+                <h4>{{onemessage.content}}</h4>
+                <a href="/profile/{{onemessage.poster.id}}"> Posted by: {{onemessage.poster.first_name}}
+                        {{onemessage.poster.last_name}}</a> On: {{onemessage.created_at}}
+                {% if request.session.user_id == onemessage.poster.id %}
+                <a href="/edit/{{onemessage.id}}">Edit   </a> <a href="/delete/{{onemessage.id}}">   Delete</a>
+                {% endif %}
+                
+                <form action="/addcomment/{{onemessage.id}}" method="POST">
+                    {% csrf_token %}
+                   <br> Leave a comment:<input type="text" name="content"> <input type="submit" value="Post a comment">
+                </form>
+                <h5>Comments:</h5>
+                {% for onecomm in onemessage.comments.all %}
+                <p>{{onecomm.content}}  Posted on {{onecomm.created_at}}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+
+
+    </div>
+</body>
+
+</html>

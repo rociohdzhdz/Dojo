@@ -1,0 +1,153 @@
+$ python manage.py makemigrations
+Migrations for 'BooksApp':
+  BooksApp\migrations\0002_auto_20200808_1350.py
+    - Remove field name from publisher
+    - Add field desc to book
+    - Add field first_name to publisher
+    - Add field last_name to publisher
+(djangoPy3Env)
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/booksproj (master)
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: BooksApp, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying BooksApp.0002_auto_20200808_1350... OK
+(djangoPy3Env)
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/booksproj (master)
+$ python manage.py shell
+Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:20:19) [MSC v.1925 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from BooksApp.models import Book, Publisher
+********************************************************
+Create 5 books
+>>> Book.objects.create(title="Java",desc="a book from Java")
+<Book: Book object (4)>
+>>> Book.objects.create(title="Python",desc="Good Python book")
+<Book: Book object (5)>
+>>> Book.object.create(title="PHP",desc="the book of PHP")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> Book.objects.create(title="PHP",desc="Good book of PHP")
+<Book: Book object (6)>
+>>> Book.objects.create(title="Ruby", desc="The Ruby book")
+<Book: Book object (7)>
+*******************************************************
+Create Authors
+<Book: Book object (7)>
+>>> Publisher.objects.create(first_name="Jane",last_name="Austen")
+<Publisher: Publisher object (3)>
+>>> Publisher.objects.create(first_name=Emily"last_name="Dickinson")
+  File "<console>", line 1
+    Publisher.objects.create(first_name=Emily"last_name="Dickinson")
+                                             ^
+SyntaxError: invalid syntax
+>>> Publisher.objects.create(first_name="Emily",last_name="Dickinson")
+  File "<console>", line 1
+    Publisher.objects.create(first_name="Emily",last_name="Dickinson")
+    ^
+SyntaxError: invalid syntax
+>>> Publisher.objects.create(first_name="Emily",last_name="Dickinson")
+<Publisher: Publisher object (4)>
+>>> Publisher.objects.create(first_name="Fyodor",last_name="Dostoevksy")
+<Publisher: Publisher object (5)>
+>>> Publisher.objects.create(first_name="William",last_name="Shakespeare")
+<Publisher: Publisher object (6)>
+>>> Publisher.objects.create(first_name="Lau",last_name="Tzu")
+<Publisher: Publisher object (7)>
+********************************************************
+Add notes field and migrate
+
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/booksproj (master)
+$ python manage.py makemigrations
+Migrations for 'BooksApp':
+  BooksApp\migrations\0003_publisher_notes.py
+    - Add field notes to publisher
+(djangoPy3Env)
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/booksproj (master)
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: BooksApp, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying BooksApp.0003_publisher_notes... OK
+(djangoPy3Env)
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/booksproj (master)
+$ python manage.py shell
+$ python manage.py shell
+Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:20:19) [MSC v.1925 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from BooksApp.models import Book,Publisher
+********************************************************
+Change names
+
+ c=Book.objects.get(id=3)
+>>> c.title="C#"
+>>> c.save()
+ l=Publisher.objects.get(id=6)
+>>> l.first_name="Bill"
+>>> l.save()
+*******************************************************
+
+ this_book=Book.objects.get(id=3)
+>>> this_publisher=Publisher.objects.get(id=3)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=4)
+>>> this_publisher=Publisher.objects.get(id=3)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=3)
+>>> this_publisher=Publisher.objects.get(id=3)
+>>> this_publisher=Publisher.objects.get(id=4)
+>>> this_publisher.books.add(this_book)
+ this_book=Book.objects.get(id=4)
+>>> this_publisher=Publisher.objects.get(id=4)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=5)
+>>> this_publisher=Publisher.objects.get(id=4)
+>>> this_publisher.books.add(this_book)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=4)
+>>> this_publisher=Publisher.objects.get(id=5)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=5)
+>>> this_publisher=Publisher.objects.get(id=5)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=6)
+>>> this_publisher=Publisher.objects.get(id=5)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=3)
+>>> this_publisher=Publisher.objects.get(id=3)
+>>> this_publisher=Publisher.objects.get(id=6)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=4)
+>>> this_publisher=Publisher.objects.get(id=6)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=5)
+>>> this_publisher=Publisher.objects.get(id=6)
+>>> this_publisher.books.add(this_book)
+>>> this_book=Book.objects.get(id=6)
+*****************************************************
+ this_book=Book.objects.get(id=5)
+>>> this_book.publishers.all()
+<QuerySet [<Publisher: Publisher object (5)>, <Publisher: Publisher object (6)>]>
+>>>
+this_book=Book.objects.get(id=5)
+>>> this_publisher=Publisher.objects.get(id=3)
+>>> this_book.publishers.remove(this_publisher)
+******************************************************
+ this_book=Book.objects.get(id=4)
+>>> this_publisher=Publisher.objects.get(id=7)
+>>> this_publisher.books.add(this_book)
+
+*******************************************************
+>>> this_publisher.books.all()
+<QuerySet [<Book: Book object (3)>, <Book: Book object (4)>, <Book: Book object (5)>, <Book: Book object (6)>, <Book: Book object (7)>]>
+********************************************************
+>>> this_book=Book.objects.get(id=7)
+>>> this_book.publishers.all()
+<QuerySet [<Publisher: Publisher object (6)>]>
+>>>
+
+
+

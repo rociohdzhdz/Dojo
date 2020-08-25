@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+
+        #email {
+            background-color: rgb(201, 129, 129);
+        }
+
+
+        #button {
+            font-weight: bold;
+        }
+    </style>
+    <title>Rocio Hernandez</title>
+</head>
+
+<body>
+    <h1>Rocio Hernandez</h1>
+    <p>
+        <img src="OrenIshi.jfif" alt="My blog main image">
+
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsam, culpa alias laborum eius autem
+        accusamus, tenetur qui nostrum voluptates deserunt sunt. Tempora sit dolore enim laboriosam, dolores corrupti
+        porro!
+    </p>
+    <div class="Table">
+
+        <p>
+        <table>
+            <thead>Films History</thead>
+            <tr>
+                <th>Year</th>
+                <th>Name of the Film</th>
+            </tr>
+            <tr>
+                <td>1994</td>
+                <td>Pulp Fiction</td>
+            </tr>
+            <tr>
+                <td>2003</td>
+                <td>Kill Bill</td>
+            </tr>
+            <tr>
+                <td>2004</td>
+                <td>Kill Bill V2</td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <p>
+        <a href="https://www.youtube.com/watch?v=2XW1ZXcejiM"> Check this awesome video</a>
+    </p>
+    <h2>Please take this short survey</h2>
+    <div class="Survey">
+        <form action="/survey">
+
+            <p>
+                <label for="email">Please add your email</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="receiveemail">Do you want to receive our email communication?</label>
+            </p>
+            <p>
+                <label for="afirmative">Yes, I want to receive your emails</label>
+                <input type="radio" name="receiveemail" id="afirmative" value="afirmative">
+                <label for="negative">No, I don´t want to receive any communication</label>
+                <input type="radio" name="receiveemail" id="negative" value="negative">
+            </p>
+            <p>
+                <label for="channel">How did you hear about us: (Please select all that apply) </label>
+            </p>
+            <p>
+            <input type="checkbox" value="Facebook" id="fb">Facebook</input>
+            </p>
+            <p>
+                <input type="checkbox" value="Instagram" id="Ig">Instagram</input>
+            </p>
+            <p>
+                <input type="checkbox" value="Twitter" id="tt">Twitter</input>
+            </p>
+            <p>
+                <input type="checkbox" value="Bing" id="bg">Bing</input>
+            </p>
+            <p>
+                <input type="checkbox" value="Google" id="goog">Google</input>
+            </p>
+            <button id="button" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

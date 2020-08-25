@@ -1,0 +1,21 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+h1{
+    width: 900px;
+    text-align: center;
+}
+#wrapper{
+    width: 900px;
+    height: 300px;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+.formas{
+    width: 400px;
+    height: 250px;
+    margin-left: 50px;
+    
+}

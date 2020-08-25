@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Show</title>
+</head>
+<body>
+    <h1>Selected Show Details</h1>
+    <h4>{{one_show.title}}</h4>
+    <h4>{{one_show.network}}</h4>
+    <h4> {{one_show.releasedate}}</h4>
+    <h4>{{one_show.description}}</h4>
+    <h4>{{one_show.updated_at}}</h4>
+    <a href="/shows/{{ one_show.id }}/edit">Edit Show</a>
+    <br>
+    <a href="/shows/{{ one_show.id }}/destroyshow">Delete Show</a>
+</body>
+</html>

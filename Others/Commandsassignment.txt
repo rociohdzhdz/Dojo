@@ -1,0 +1,36 @@
+Pip install Django
+This command runs Django installation within our virtual environment
+
+pip list
+This command shows folders (packages) inside our virtual environment
+
+deactivate
+Deactivate the virtual environment
+
+pip3 list
+when virtual environment is deactivated the command only shows pip and setup tools with the environment active the result is the same.
+
+pip install Django==1.11.9
+This command returns a message saying this requirement already satisfied because we already ran this before
+
+pip freeze
+This command only gets names and version for packages without including setuptools
+
+pip freeze > requirements.txt
+This command creates a txt file in the desktop
+
+pip uninstall Django
+This command uninstalll Django, but first ask if we really want to unistall it. I selected Y and then I got a message about successfuly uninstall
+
+pip show Django
+This does not show anything
+
+pip Search flask
+this show all the Flask packages
+
+
+pip show django
+
+
+
+

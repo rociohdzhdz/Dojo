@@ -1,0 +1,29 @@
+
+#wrapper{
+    background-color: salmon;
+    width: 900px;
+    height: 600px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+ h1{
+     text-align: center;
+ }
+
+.surveyq{
+    width:500px;
+    height: 20px;
+    border: blue;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-top: 50px;
+    border-radius: 1px;
+    
+}
+
+#surveybord{
+        
+    flex-wrap: wrap;
+}

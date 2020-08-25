@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users with Models and templates</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+    <h1>All the Users</h1>
+    <table>
+    <!-- #{{all_users}} -->
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Age</th>
+    </tr>
+    {% for Users in all_users %}
+        <tr>
+            <td>{{ Users.id }}</td>
+            <td>{{ Users.first_name }}</td>
+            <td>{{ Users.last_name }}</td>
+            <td>{{ Users.email_address }}</td>
+            <td>{{ Users.age }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <h1>Add a User</h1>
+<div id="formulario">
+    <form action="/create" method="POST">
+        {% csrf_token %}
+        First Name: <input type="text" name='fName'>
+        <br>
+        Last Name: <input type="text" name='lName'>
+        <br>
+        Email: <input type="text" name='mail'>
+        <br>
+        Age: <input type="text" name='age'>
+        <br>
+        <input id="butt" type="submit" value="Add User">
+    </form>
+</div>
+</div>
+</body>
+</html>

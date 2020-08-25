@@ -1,0 +1,59 @@
+*{
+    outline: 1px dashed red;
+}
+
+#wrapper{
+    width: 900px;
+    height: auto;
+    background-color: lavender;
+}
+#header{
+    width: 890px;
+    height: auto;
+    background-color: rebeccapurple;
+    display: flex;
+}
+#Img1{
+    width: 50px;
+    height: 50px;
+    display: inline-block
+}
+#header h1{
+    width: 850px;
+    margin-left: 50px;
+}
+#header h2{
+    width: 300px;
+    background-color: royalblue;
+}
+.navigator{
+    width: 200px;
+    height: auto;
+    background-color: red;
+    display: inline-block;
+    
+}
+.navimg{
+    width: 200px;
+    height: 350px;
+    background-image: url("imagesint/ad_background.png");
+
+}
+.navigator h3{
+    margin-top: -500;
+    color: white;
+}
+#ninja{
+    width: 100px;
+    height: 180px;
+    margin-top: 0px;
+    margin-left: 40px;
+}
+.navigator h4{
+    color: white;
+}
+.content {
+    width: 500px;
+    height: 200px;
+    background-color: tomato;
+}

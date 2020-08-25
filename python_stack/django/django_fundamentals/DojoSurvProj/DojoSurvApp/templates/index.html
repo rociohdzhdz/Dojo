@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    
+    <div id="wrapper">
+      
+            <form action="/create" method="POST">
+                <h1>Dojo Survey </h1>
+                {% csrf_token %}
+                <div class="surveyq">
+                    Add your Name: <input type="text" name='survname'>
+                </div>
+                <div class="surveyq">
+                    <label for="DojoLocation">Dojo Location:</label>
+                    <select name="DojoLoc" id="Loc">
+                        <option value="San Jose">San Jose </option>
+                        <option value="Seattle">Seattle </option>
+                        <option value="California">California </option>
+                        <option value="Mexico">Mexico </option>
+                    </select>
+                </div>
+                <div class="surveyq">
+                    <label for="FavLang">Favorite Language:</label>
+                    <select name="FavLang" id="Lang">
+                        <option value="Python">Python </option>
+                        <option value="Java">Java </option>
+                        <option value="C#">C# </option>
+                        <option value="Ruby">Ruby </option>
+                    </select>
+                </div>
+                <div class="surveyq">Comment (Optional):
+                    <textarea rows = "5" cols = "60" name='SurvComms'> </textarea>
+                    <br>
+                    <br>
+                   
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="surveyq">
+                    
+                <input type="submit" value="Submit Survey">
+            </div>
+            </form>
+    </div>
+</body>
+
+</html>

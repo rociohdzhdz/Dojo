@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - By RHH - Dojo Python Belt</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styleProfile.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="head">
+            <div id="headUsr">
+
+                <a href="/quotes">Back</a>
+                <form action="/logout" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
+            <h2>{{oneuser.first_name}} {{oneuser.last_name}} Quotes</h2>
+        </div>
+
+        <h3> All Quotes Posted </h3>
+
+        {% for onequote in oneuser.quotes.all %}
+        <div class="quotechar">
+            <p>Author: {{onequote.author}}</p>
+            <p>Quote: {{onequote.quotedes}}</p>
+            <p>Created at: {{onequote.created_at}}</p>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+#wrapper{
+    width: 900px;
+    height: 600px;
+    background-color: cornsilk;
+   
+}
+h2{
+    color: darkblue;
+    text-align: center;
+    width: 900px;
+}
+#finit2{
+    width: 900px;
+    display: inline-block;
+
+}
+
+.finit{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: cyan;
+    margin-top: 50px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+activ2{
+    width: 900px;
+    display: inline-block;
+}

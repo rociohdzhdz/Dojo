@@ -1,0 +1,53 @@
+*{
+    font-style: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:blue;
+}
+#wrapper{
+    margin: 20px;
+    width: 900px;
+    height: 1500px;
+    background-color: gray;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+.formulario{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 380px;
+    height: 500px;
+    background-color:gray;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+#butt{
+    font-weight: bold;
+    color: blue;
+}
+#ftext{
+    font-weight: normal;
+    color: blue;
+    padding: 5px;
+
+}
+#butt1{
+    font-weight: bold;
+    color: blue;
+}
+#f2text{
+    font-weight: normal;
+    color: blue;
+}
+
+
+
+
+
+

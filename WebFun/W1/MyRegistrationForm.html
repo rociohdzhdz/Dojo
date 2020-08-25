@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+
+        #Password {
+            background-color: rgb(168, 146, 189);
+        }
+
+        #PwConfirm {
+            background-color: rgb(168, 146, 189);
+        }
+
+        #button {
+            font-weight: bold;
+        }
+    </style>
+    <title>My registration form</title>
+</head>
+
+<body>
+    <h1>My Registration Form</h1>
+    <form action="/Registration">
+        <p>
+            <label for="FirstName">FirstName:</label>
+            <input type="text" name="FirstName" id="FirstName">
+
+        </p>
+        <p>
+            <label for="LastName">LastName:</label>
+            <input type="text" name="LastName" id="LastName">
+
+        </p>
+        <p>
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email">
+
+        </p>
+        <p>
+            <label for="Password">Password:</label>
+            <input type="password" name="Password" id="Password">
+
+        </p>
+        <p>
+            <label for="PwConfirm">PW Confirm:</label>
+            <input type="password" name="PwConfirm" id="PwConfirm">
+
+        </p>
+        <p>
+            <label for="Birthday">Birthday:</label>
+            <input type="date" name="Birthday" id="Birthday">
+
+        </p>
+        <p>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other" value="other">
+
+        </p>
+        <p>
+            <label for="shortdesc">A short description about yourself</label>
+        </p>
+        <p>
+            <textarea name="shortdesc" id="shortdesc" cols="30" rows="10"></textarea>
+
+        </p>
+        <p>
+            <label for="favlang">Favorite language </label>
+            <select name="favlang" id="favlang">
+                <option value="">JavaScript</option>
+                <option value="">Python</option>
+                <option value="">C++</option>
+            </select>
+        </p>
+        <button id="button" type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

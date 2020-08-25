@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos and Ninjas</title>
+    {%load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Dojos and Ninjas Assignment</h1>
+        <div class="formas">
+            <form action="/newdojo" method="POST">
+                {% csrf_token %}
+                Dojo Name: <input type="text" name='dname'>
+                <br><br>
+                City: <input type="text" name='dcity'>
+                <br><br>
+                State: <input type="text" name='dstate'>
+                <br><br>
+                Description: <input type="text" name='desc'>
+                <br><br>
+                <input id="butt" type="submit" value="Add Dojo">
+            </form>
+        </div>
+        <div class="formas">
+            <form action="/newninja" method="POST">
+                {% csrf_token %}
+                First Name: <input type="text" name='nname'>
+                <br><br>
+                Last Name: <input type="text" name='nlastname'>
+                <br><br>
+                <label for="dojon">Dojo:</label>
+                <select id="dojon" name="dojon">
+                {% for Dojos in all_dojos %}
+                    <option value="{{ Dojos.id }}">{{ Dojos.name }}</option>
+                {% endfor %}
+                <br><br>
+                <input id="butt" type="submit" value="Add Ninja">
+            </form>
+        </div>
+
+    </div>
+    <hr style="border: 4px solid blue;" />
+    <h1>All the Ninjas - Dojos</h1>
+    {% for Dojos in all_dojos %}
+    <br>
+        {{Dojos.name}}
+            {% for Ninjas in Dojos.dojo.all %}
+                <br>
+                {{ Ninjas.id }}
+                <br>
+                {{ Ninjas.first_name }}
+                <br>
+                {{ Ninjas.last_name }}
+                <br>
+                {{ Ninjas.dojonam }}
+            {% endfor %}
+    {% endfor %}
+</body>
+
+</html>

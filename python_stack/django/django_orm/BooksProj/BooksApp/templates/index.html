@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Authors</title>
+</head>
+<body>
+    <div id="wrapper">
+       
+        <h1>Add a User</h1>
+    <div id="formulario">
+        <form action="/createbooks" method="POST">
+            {% csrf_token %}
+            Title: <input type="text" name='title'>
+            <br>
+            Description: <input type="text" name='description'>
+            <br>
+            <input id="butt" type="submit" value="Add Book">
+        </form>
+        <h1>All the Books</h1>
+        <table>
+        <!-- #{{all_users}} -->
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        {% for Books in all_books %}
+            <tr>
+                <td>{{ Books.id }}</td>
+                <td>{{ Books.title }}</td>
+                <td>{{ Books.desc }}</td>
+                <td><a href="one_book/{{Books.id}}">View</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

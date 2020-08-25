@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="surveybord">
+        <h1>Submitted Information:</h1>
+        <div class="surveyq">
+            Name: {{request.session.surveynombre}}
+        </div>
+        <div class="surveyq">
+           Dojo Location: {{request.session.surveylugar}}
+        </div>
+        <div class="surveyq">
+            Favorite Language: {{request.session.surveylenguaje}}
+        </div>
+        <div class="surveyq">
+            Comments: {{request.session.surveycommentarios}}
+        </div>
+        <div class="surveyq">
+        <form action="/">
+            <input type="submit" value="Go Back">
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

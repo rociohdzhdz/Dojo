@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Show</title>
+</head>
+<body>
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+    <div id="wrapper">
+    
+        <h1>Add a Show</h1>
+    <div id="formulario">
+        <form action="/createshow" method="POST">
+            {% csrf_token %}
+            Title: <input type="text" name='title'>
+            <br>
+            Network: <input type="text" name='network'>
+            <br>
+            Release Date: <input type="date" name='released'>
+            <br>
+            Description: <textarea cols="50" rows="5" name='desc'></textarea>
+            <br>
+            <input id="butt" type="submit" value="Add Show">
+        </form>
+        <a href="shows/newshow">New Show</a>
+</body>
+</html>

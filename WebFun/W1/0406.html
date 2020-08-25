@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <style>
+        /* 3 elements to add in a CSS style
+        1.selector
+        2.attribute
+        3.property
+        */
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+
+        #Username {
+            background-color: blueviolet;
+        }
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/create_user">
+        <p>
+            <label for= "Username">Username</label>
+            <input type="text" name="Username" id="Username">
+        </p>
+        <p>
+            <label For ="password">Password</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <p>
+            <label For ="password">Confirm Password</label>
+            <input type="password" name="confirmpassword" id="confirmpassword">
+        </p>
+        <p>
+            <input type="date" name="birthday" id="birthday">
+        </p>
+        <p>
+            <input type="color" name="color" id="color">
+        </p>
+        <p>
+            <label for="favletter">Favorite letter </label>
+            <select name="favletter" id="favletter">
+                <option value="">a</option>
+                <option value="">b</option>
+                <option value="">c</option>
+            </select>
+        </p>
+        <p>
+            <label for="cols">Comments</label>
+            <textarea cols="30"></textarea>
+        </p>
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+p{
+	background-image: radial-gradient(red,yellow);
+	display: inline;
+}
+a{
+	background-color: yellow;
+	/*display: block;*/
+}
+ul{
+	background-color: blue;
+	display: inline;
+}
+ul li{
+	background-color: green;
+	display: inline;
+}
+#grad2{
+	width: 600px;
+	height: 300px;
+	background-image:radial-gradient(violet, gray);
+}

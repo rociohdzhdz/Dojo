@@ -1,0 +1,16 @@
+ /* 3 elements to add in a CSS style
+        1.selector
+        2.attribute
+        3.property
+        */
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+
+        #Username {
+            background-color: blueviolet;
+        }
+        #password {
+            background-color: blueviolet;
+        }

@@ -1,0 +1,132 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#wrapper{
+    background-color:gray;
+    margin: 0px auto;
+    width: 1024px;
+    min-height: 800px;
+
+}
+
+.header-box{
+    
+    width: 1022px;
+    height: 70px;
+    display: inline-block;
+}
+.header-box h1{
+    width: 200px;
+    height: 60px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.header-box h2{
+    width: 500px;
+    height: 60px;
+    display: inline-block;
+    margin-left: 240px;
+}
+.content-box{
+    background-color: brown;
+    width: 980px;
+    height: 650px;
+    margin:20px;
+}
+.top-box{
+    
+    width: 960px;
+    height: 200px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#image{
+    height: 190px;
+    width: 400px;
+    display: inline-block;
+    margin:5px;
+    margin-top: -200px;
+    border: 2px groove;
+    }
+#parag{
+    height: 290px;
+    width: 430px;
+    display: inline-block;    
+}
+
+#parag a{
+    display: block;
+    background-color: hotpink;
+    padding: 2px;
+    width: 90px;
+    border:1px solid black;
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+.bottom-box{
+    
+    width: 960px;
+    height: 400px;
+   margin: 12px;
+    display: inline-block;
+    
+}
+.message{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    background-color: teal;
+    min-height: 390px;
+    margin:8px;
+}
+.message a{
+    display: block;
+    background-color: hotpink;
+    padding: 10px;
+    border:1px solid black;
+    color: blanchedalmond;
+    text-decoration: none;
+
+}
+
+.message img{
+height: 150px;
+margin:10px;
+font: size 5;
+}
+ 
+.message p{
+    height: 50px;
+    margin:10px;
+ text-align: justify;
+}
+
+.message techlbl{
+    display: block;
+    background-color: hotpink;
+    padding: 10px;
+    border:1px solid black;
+    color: blanchedalmond;
+    text-decoration: none;
+    
+}
+
+#foot_img{
+    height: 30px;
+    width: 30px;
+}
+
+#foot{
+    text-align: center;
+}
+
+#footimg{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 170px;
+    
+}

@@ -1,0 +1,15 @@
+#wrapper{
+    width: 800px;
+    height: 400px;
+    background-color: burlywood;
+}
+
+h2{
+    text-align: center;
+    color: blueviolet;
+}
+
+#butt{
+    margin-left: 320px;
+    align-content: center;
+}

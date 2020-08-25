@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Exam by RHH Quotes Index page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        {% for message in messages %}
+        <p>{{ message }} </p>
+        {% endfor %}
+        <h1>Welcome to our quotes page!!</h1>
+        <div class="formulario">
+            <h2>If you don't have a user please register</h2>
+            <form action="/newuser" method="POST">
+                {% csrf_token %}
+                <p>Fist Name:<input type="text" name="fname" id="tname"></p>
+                <p>Last Name:<input type="text" name="lname" id="tlname"></p>
+                <p>Email: <input type="text" name="mail" id="temail"></p>
+                <p>Password:<input type="text" name="password" id="tpass"></p>
+                <p> Confirm Password: <input type="text" name="confirmpass" id=""></p>
+                <p><input type="submit" value="Register" id="BRegister"></p>
+            </form>
+        </div>
+        <div class="formulario">
+            <h2>Already a user?.. Then Login</h2>
+            <form action="/loginuser" method="POST">
+                {% csrf_token %}
+                <p>Email: <input type="text" name="logmail" id="tlmail"></p>
+                <p>Password: <input type="text" name="logpass" id="tlpass"></p>
+                <p><input type="submit" value="Login" id="BLogin"></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

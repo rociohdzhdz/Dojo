@@ -1,0 +1,9 @@
+select *
+from users
+
+insert into users (first_name, last_name)
+values ('Rocio', 'Hernandez')
+
+update users set handle='Rei Ayanami' where id=6
+
+delete from users where handle='Rey Ayanami'

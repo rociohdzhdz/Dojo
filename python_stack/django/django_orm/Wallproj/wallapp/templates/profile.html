@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+</head>
+<body>
+    <h1>Welcome to {{one_user.first_name}} {{one_user.last_name}}</h1>
+    <a href="/success">Return Home</a>
+    <h2>User Post</h2>
+    {% for onemess in one_user.messages.all %} 
+        <p>{{onemess.content}}</p>
+        <p>{{onemess.created_at}}</p>
+        {% if request.session.user_id == onemess.poster.id %}
+        <a href="/edit/{{onemess.id}}">Edit </a> <a href="/delete/{{onemess.id}}">  Delete</a>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

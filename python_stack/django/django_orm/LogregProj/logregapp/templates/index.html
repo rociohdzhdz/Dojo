@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page for login or registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+<div id="wrapper">
+    <div class="formulario">
+        <h1>Registration</h1>
+        <form action="/registerus" method="POST">
+            {% csrf_token %}
+            <p>Fist Name: <input type="text" name="fname" id="ftext"></p>
+            <p>Last Name: <input type="text" name="lname" id="ftext"></p>
+            <p>Email: <input type="text" name="mail" id="ftext"></p>
+            <p>Password: <input type="text" name="pass" id="ftext"></p>
+            <p> Confirm Password: <input type="text" name="cpass" id="ftext"></p>
+            <p><input type="submit" value="Register" id="butt1"></p>
+        </form>
+    </div>
+    <div class="formulario">
+        <h1>Login</h1>
+        <form action="/loginus" method="POST">
+            {% csrf_token %}
+            <p>Email: <input type="text" name="mail2" id="f2text"></p>
+            <p>Password: <input type="text" name="pass2" id="f2text"></p>
+            <p><input type="submit" value="Login" id="butt"></p>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

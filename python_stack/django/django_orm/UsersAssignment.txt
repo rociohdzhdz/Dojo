@@ -1,0 +1,23 @@
+Users.objects.create(first_name="Rocio",last_name="Hernandez",email_address="rocio@mail",age=20)
+Users.objects.create(first_name="Gil",last_name="Rex",email_address="rex@mail",age=25)
+Users.objects.create(first_name="Rei",last_name="Ayanami",email_address="rei@mail",age=14)
+>>> Users.objects.all()
+>>> Users.objects.first()
+<Users: Users object (1)>
+>>> Users.objects.last()
+<Users: Users object (3)>
+
+>>> user_to_update=Users.objects.get(id=3)
+>>> user_to_update.last_name="Pancakes"
+>>> user_to_update.save()
+
+>>> user_to_delete=Users.objects.get(id=2)
+>>> user_to_delete.delete()
+(1, {'UsersApp.Users': 1})
+
+>>> Users.objects.all().values()
+<QuerySet [{'id': 1, 'first_name': 'Rocio', 'last_name': 'Hernandez', 'email_address': 'rocio@mail', 'age': 20, 'created_at': datetime.datetime(2020, 8, 1, 0, 51, 20, 155321, tzinfo=<UTC>), 'updated_at': datetime.datetime(2020, 8, 1, 0, 51, 20, 155321, tzinfo=<UTC>)}, {'id': 3, 'first_name': 'Rei', 'last_name': 'Pancakes', 'email_address': 'rei@mail', 'age': 14, 'created_at': datetime.datetime(2020, 8, 1, 0, 54, 32, 762538, tzinfo=<UTC>), 'updated_at': datetime.datetime(2020, 8, 1, 0, 58, 23, 258538, tzinfo=<UTC>)}]>
+
+>>> Users.objects.all().values().order_by("first_name")
+<QuerySet [{'id': 3, 'first_name': 'Rei', 'last_name': 'Pancakes', 'email_address': 'rei@mail', 'age': 14, 'created_at': datetime.datetime(2020, 8, 1, 0, 54, 32, 762538, tzinfo=<UTC>), 'updated_at': datetime.datetime(2020, 8, 1, 0, 58, 23, 258538, tzinfo=<UTC>)}, {'id': 1, 'first_name': 'Rocio', 'last_name': 'Hernandez', 'email_address': 'rocio@mail', 'age': 20, 'created_at': datetime.datetime(2020, 8, 1, 0, 51, 20, 155321, tzinfo=<UTC>), 'updated_at': datetime.datetime(2020, 8, 1, 0, 51, 20, 155321, tzinfo=<UTC>)}]>
+

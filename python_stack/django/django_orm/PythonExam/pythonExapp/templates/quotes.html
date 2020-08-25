@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Page - By RHH- Python belt Exam</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stylequotes.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+        <div id="head">
+            <div id="headUsr"><a href="/myaccount/{{request.session.usr_id}}">Edit My Account</a>
+                <form action="/logout" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
+            <h2>Welcome {{ request.session.usrname }}</h2>
+        </div>
+        <div id="quotes">
+            <div id="quoteform">
+                <h3>Add a New Quote</h3>
+                <form action="/newquote" method="POST">
+                    {% csrf_token %}
+                    Author: <input type="text" name="author" id=""><br><br>
+                    Quote: <br><textarea name="quotedes" id="" cols="30" rows="10"></textarea><br>
+                    <input type="submit" value="Post Quote">
+                </form>
+            </div>
+            {% for onequote in all_quotes %}
+            <div class="quotechar">
+                <p> {{ onequote.author }} </p>
+                <p> {{ onequote.quotedes }} </p>
+                <p> Posted By:<a href="/user/{{onequote.poster.id}}"> {{ onequote.poster.first_name }}
+                        {{onequote.poster.last_name}} </a> Posted on: {{onequote.created_at}} </p>
+                <form action="/givelike/{{onequote.id}}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Like">
+                </form>
+                <p>Likes: {{ onequote.likes.count }}</p>
+                {% if request.session.usr_id == onequote.poster.id %}
+                <a href="/delete/{{onequote.id}}">Delete</a>
+                <br>
+                {% endif %}
+                {% endfor %}
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+>>> from DojoNinjasapp.models import Dojos
+>>> from DojoNinjasapp.models import Ninjas
+>>> Dojos.objects.create(name="Dojo Seattle",city="Seattle",state="WA")
+<Dojos: Dojos object (1)>
+>>> Dojos.objects.create(name="Dojo California",city="San Francisco",state="CA")
+<Dojos: Dojos object (2)>
+>>> Dojos.objects.create(name="Dojo Mexico",city="CDMX",state="MX")
+<Dojos: Dojos object (3)>
+********************************************************
+>>> c=Dojos.objects.get(id=1)
+>>> c.delete()
+(1, {'DojoNinjasapp.Ninjas': 0, 'DojoNinjasapp.Dojos': 1})
+>>> c=Dojos.objects.get(id=2)
+>>> c.delete()
+(1, {'DojoNinjasapp.Ninjas': 0, 'DojoNinjasapp.Dojos': 1})
+>>> c=Dojos.objects.get(id=3)
+>>> c.delete()
+(1, {'DojoNinjasapp.Ninjas': 0, 'DojoNinjasapp.Dojos': 1})
+*********************************************************DDDojos.objects.create(name="Dojo NY",city="New York",state="NY")
+
+Dojos.objects.create(name="Dojo Boston",city="Boston",state="MA")
+
+Dojos.objects.create(name="Dojo Tokio",city="Tokio",state="JA")
+*********************************************************
+
+>>> this_dojo=Dojos.objects.get(id=4)
+>>> a_ninja=Ninjas.objects.create(first_name="Rocio",last_name="Hernandez",dojonam=this_dojo)
+
+>>> this_dojo=Dojos.objects.get(id=4)
+>>> a_ninja=Ninjas.objects.create(first_name="Gil",last_name="Rex",dojonam=this_dojo)
+
+>>> this_dojo=Dojos.objects.get(id=4)
+>>> a_ninja=Ninjas.objects.create(first_name="Rei",last_name="Ayanami",dojonam=this_dojo)
+******************************************************
+
+>>> doj=Dojos.objects.get(id=5)
+>>> ninj=Ninjas.objects.create(first_name="Vio",last_name="Pineda",dojonam=doj)
+>>> doj=Dojos.objects.get(id=5)
+>>> ninj=Ninjas.objects.create(first_name="Ross",last_name="Pineda",dojonam=doj)
+>>> doj=Dojos.objects.get(id=5)
+>>> ninj=Ninjas.objects.create(first_name="Tony",last_name="Starck",dojonam=doj)
+**************************************
+ doj=Dojos.objects.get(id=4)
+doj.dojo.all()
+<QuerySet [<Ninjas: Ninjas object (1)>, <Ninjas: Ninjas object (2)>, <Ninjas: Ninjas object (3)>]>
+ ********************************************
+>>> doj=Dojos.objects.get(id=6)
+>>> doj.dojo.all()
+************************************************
+>>> ninj=Ninjas.objects.get(id=6)
+>>> ninj.dojonam
+<Dojos: Dojos object (5)>
+******************************************************
+$ python manage.py makemigrations
+Migrations for 'DojoNinjasapp':
+  DojoNinjasapp\migrations\0002_dojos_desc.py
+    - Add field desc to dojos
+(djangoPy3Env)
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/dojoninjasproj (master)
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DojoNinjasapp, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying DojoNinjasapp.0002_dojos_desc... OK
+(djangoPy3Env)
+******************************************************
+rohern@MININT-KGJTEHJ MINGW64 ~/desktop/dojo/python_stack/django/django_orm/dojoninjasproj (master)
+$ python manage.py shell
+Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:20:19) [MSC v.1925 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from DojoNinjasapp.models import Dojos
+>>> from DojoNinjasapp.models import Ninjas
+
+**************************************
+Dojos.objects.create(name="Dojo Canada",city="Toronto",state="CA")

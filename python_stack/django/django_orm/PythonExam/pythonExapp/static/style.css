@@ -1,0 +1,44 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(63, 61, 61);
+}
+#wrapper{
+    width: 1100px;
+    height: auto;
+    background-color:whitesmoke;
+    margin-left: 50px;
+}
+
+h1{
+    text-align: center;
+    color: blue;
+}
+.formulario{
+    display: inline-block;
+    vertical-align: top;
+    background-color:rgb(241, 200, 213);
+    margin: 45px;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+}
+
+#tname{
+    margin-left: 65px;
+}
+#tlname{
+    margin-left: 60px;
+}
+
+#temail{
+    margin-left: 95px;
+}
+
+#tpass{
+    margin-left: 70px;
+}
+
+#tlmail{
+    margin-left: 32px;
+}

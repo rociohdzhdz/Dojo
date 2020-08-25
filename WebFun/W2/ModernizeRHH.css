@@ -1,0 +1,155 @@
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   }
+
+#wrapper{
+    background-color: black;
+    /*margin: 10px 200px 10px;*/
+    width: 1070px;
+    height: 1200px;
+}
+
+#logo{
+    width: 220px;
+    height: 60px;
+    vertical-align: middle;
+    border: 2px solid black;
+    display: inline-block;
+}
+#box-header h4{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 600px;
+    color: silver;
+
+}
+#menu{
+    display: block;
+    background-color: rgb(90, 86, 86);
+}
+#box-header ul li{
+    display: inline-block;
+    color: silver;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.box-marquee{
+    width: 940px;
+    height: 300px;
+    margin: 0px 20px 0px 20px;
+}
+.box-marquee img{
+    width: 940px;
+    height: 300px;
+    border: 2px solid gray;
+}
+.box-options{
+    background-color: rgb(37, 36, 36);
+    width: 940px;
+    height: 210px;
+    margin: 20px;
+}
+.box-optionssub{
+    background-color: rgb(37, 36, 36);
+    width: 210px;
+    height: 180px;
+    margin: 3px;
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.box_img{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+
+}
+.box-optionssub h3{
+    color: orange;
+    display: inline-block;
+    margin:10px;  
+}
+.box-optionssub h6{
+    color: white;
+    margin-left: 45px; 
+    margin-top: 0px;
+}
+.box-buy{
+    background-color: black;
+    width: 940px;
+    height: 90px;
+    margin: 20px;
+}
+.box-buy h2{
+    width: 600px;
+    height: 25px;
+    color: honeydew;
+    margin-top: 5px;
+    display: inline-block;
+}
+.box-buy a{
+    background-color: orange;
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 150px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.box-buy h6{
+    width: 600px;
+    height: 25px;
+    color: honeydew;
+    margin-top: 2px;
+}
+.box-portfolio{
+    background-color: rgb(37, 36, 36);
+    border: 1px solid groove;
+    width: 940px;
+    height: 280px;
+    margin: 20px;   
+}
+.box-portfolio h4{
+    width: 500 px;
+    height: 20px;
+    display: inline-block;
+    color: white;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.box-portfolio h6{
+    width: 100 px;
+    height: 20px;
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    margin-left: 700px;
+    margin-top: 7px;
+}
+.sub-portfolio{
+    background-color: rgb(37, 36, 36);
+    width: 210px;
+    height: 190px;
+    margin: 3px;
+    padding: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sub-portfolio h4{
+    margin-top: 5px;
+    color: orange;
+}
+.sub-portfolio p{
+    color: white;
+    font-size: x-small;
+    margin-top: -8px;
+}
+.imgport{
+    width: 200px;
+    height: 90px;
+    border: 2px solid gray;
+}
